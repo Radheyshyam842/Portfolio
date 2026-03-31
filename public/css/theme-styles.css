@@ -886,7 +886,21 @@ body {
 }
 
 .color-green { background: #78cc6d; }
-.color-blue { background: #0856c1; }
+.color-blue { 
+  background: #ff9800;
+  position: relative;
+  overflow: hidden;
+}
+.color-blue::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+  animation: shimmer 3s infinite;
+}
 .color-orange { background: #ff9800; }
 .color-pink { background: #ff5e94; }
 .color-purple { background: #c446da; }
