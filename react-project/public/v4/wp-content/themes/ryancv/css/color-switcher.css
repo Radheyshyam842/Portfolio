@@ -1,0 +1,521 @@
+/* Theme Variables */
+:root {
+    --theme-color: #78cc6d;
+    --bg-color: #31313a;
+    --text-color: #fff;
+    --box-bg: #222;
+    --border-color: rgba(255,255,255,0.1);
+}
+
+/* Light Theme */
+body.theme-style-light {
+    --bg-color: #f0f0f0;
+    --text-color: #323232;
+    --box-bg: #ffffff;
+    --card-bg: #ffffff;
+    --border-color: rgba(0,0,0,0.1);
+    --subtitle-color: #666666;
+    --header-color: #323232;
+    --menu-color: #323232;
+    --link-color: #323232;
+    --profile-bg: #ffffff;
+    --sidebar-bg: #f7f7f7;
+    --progress-bar-bg: #eee;
+    --widget-bg: #ffffff;
+    --service-text: #666666;
+    --card-box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    --pricing-bg: #ffffff;
+    --resume-date: #666666;
+    --button-text: #ffffff;
+}
+
+/* Dark Theme */
+body.theme-style-dark {
+    --bg-color: #31313a;
+    --text-color: #fff;
+    --box-bg: #2d2d35;
+    --card-bg: #31313a;
+    --border-color: rgba(255,255,255,0.1);
+    --subtitle-color: rgba(255,255,255,0.85);
+    --header-color: #fff;
+    --menu-color: #fff;
+    --link-color: #fff;
+    --profile-bg: #31313a;
+    --sidebar-bg: #2d2d35;
+    --progress-bar-bg: #444444;
+    --widget-bg: #2d2d35;
+    --service-text: #fff;
+    --card-box-shadow: none;
+    --pricing-bg: #2d2d35;
+    --resume-date: #fff;
+    --button-text: #fff;
+}
+
+.theme_panel {
+    position: fixed;
+    right: -180px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 180px;
+    background: #222;
+    padding: 20px;
+    transition: right 0.3s ease;
+    z-index: 100;
+}
+
+.theme_panel.active {
+    right: 0;
+}
+
+.toggle_bts {
+    position: absolute;
+    left: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: #222;
+    border-radius: 4px 0 0 4px;
+}
+
+.toggle-theme-panel {
+    display: block;
+    width: 100%;
+    height: 100%;
+    line-height: 50px;
+    text-align: center;
+    color: #fff;
+    font-size: 24px;
+}
+
+.theme_menu {
+    padding: 0;
+}
+
+.theme_menu h4 {
+    color: #fff;
+    margin: 15px 0;
+    font-size: 14px;
+}
+
+.segment {
+    margin-bottom: 25px;
+}
+
+.layout_style {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.layout_style li a {
+    display: block;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+.layout_style li a:hover {
+    transform: scale(1.1);
+}
+
+.layout_style li a.active {
+    box-shadow: 0 0 0 2px #fff;
+}
+
+.demo_list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+}
+
+.demo_list li {
+    width: 50%;
+}
+
+.demo_list li a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px;
+    background: var(--box-bg);
+    color: var(--text-color);
+    text-decoration: none;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+    border: 1px solid var(--border-color);
+}
+
+.demo_list li a:hover {
+    background: var(--theme-color);
+    color: #fff;
+}
+
+.demo_list li a.active {
+    background: var(--theme-color);
+    color: #fff;
+}
+
+/* Apply Theme Colors */
+body {
+    background: var(--bg-color);
+    color: var(--text-color);
+    transition: all 0.4s ease;
+}
+
+.card-inner,
+.content {
+    background: var(--box-bg);
+    transition: all 0.4s ease;
+}
+
+.title {
+    color: var(--text-color) !important;
+}
+
+.subtitle {
+    color: var(--subtitle-color) !important;
+}
+
+.box-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.border-line-h:after,
+.border-line-v:before {
+    background: var(--border-color);
+}
+
+.info-list ul li,
+.service-items .service-item .name,
+.pricing-items .pricing-item .name,
+.resume-title .name, 
+.skill-title .name,
+.skills-list ul li .name,
+.resume-items .resume-item .name,
+.box-item .desc .name {
+    color: var(--text-color);
+}
+
+.service-item .icon,
+.fuct-item .icon,
+.resume-title .icon,
+.skill-title .icon {
+    color: var(--theme-color);
+}
+
+.button,
+.lnk,
+.project-card .project-footer .btn,
+.pricing-item .lnk {
+    background: var(--theme-color);
+    color: #fff;
+}
+
+.progress .percentage {
+    background: var(--theme-color);
+}
+
+.theme_menu .layout_style li a.active {
+    box-shadow: 0 0 0 3px var(--theme-color);
+}
+
+.subtitle-typed .typing-title,
+.profile .subtitle.subtitle-typed .typing-title {
+    color: var(--theme-color);
+}
+
+.profile .social a {
+    color: var(--text-color);
+}
+
+.profile .social a:hover {
+    color: var(--theme-color);
+}
+
+.top-menu-onepage .menu li a {
+    color: var(--text-color);
+}
+
+.top-menu-onepage .menu li:hover a,
+.top-menu-onepage .menu li.active a {
+    color: var(--theme-color);
+}
+
+.project-card {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+.tech-stack span {
+    background: var(--box-bg);
+    color: var(--text-color);
+}
+
+/* Additional Theme-Specific Styles */
+.header {
+    background: var(--profile-bg);
+}
+
+.card-started {
+    background: var(--profile-bg);
+}
+
+.profile .title {
+    color: var(--header-color) !important;
+}
+
+.top-menu-onepage .menu li a span {
+    color: var(--menu-color);
+}
+
+.service-item p,
+.pricing-item .feature-list ul li,
+.resume-item .single-post-text,
+.box-item .desc .text {
+    color: var(--text-color) !important;
+}
+
+.skills-list .progress {
+    background: var(--progress-bar-bg);
+}
+
+.resume-title .icon i,
+.skill-title .icon i {
+    color: var(--theme-color);
+}
+
+.content.blog .title,
+.content.contacts .title,
+.content.about .title {
+    color: var(--header-color) !important;
+}
+
+/* Fix link colors */
+a {
+    color: var(--link-color);
+}
+
+a:hover {
+    color: var(--theme-color);
+}
+
+/* Fix sidebar */
+.content-sidebar {
+    background: var(--sidebar-bg);
+}
+
+.widget-title {
+    color: var(--header-color) !important;
+}
+
+.widget ul li a {
+    color: var(--text-color);
+}
+
+/* Fix form elements */
+input, textarea {
+    background: var(--box-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Fix icons */
+.service-item .icon,
+.fuct-item .icon {
+    color: var(--theme-color);
+}
+
+/* Fix progress bars */
+.skills-list ul li .progress {
+    background: var(--progress-bar-bg);
+}
+
+.skills-list ul li .percentage {
+    color: var(--text-color);
+}
+
+/* Fix cards and boxes */
+.card-inner {
+    background: var(--box-bg);
+    border-color: var(--border-color);
+}
+
+.box-item {
+    background: var(--card-bg);
+    border: 1px solid var(--border-color);
+}
+
+/* Fix buttons */
+.button, .lnk {
+    background: var(--theme-color);
+    color: #fff !important;
+}
+
+/* Improve transitions */
+body, .card-inner, .content, .box-item, .profile {
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Element Styles */
+/* Content Sections */
+.content {
+    background: var(--box-bg);
+    box-shadow: var(--card-box-shadow);
+}
+
+/* Typography */
+.title, h1, h2, h3, h4, h5, h6 {
+    color: var(--header-color) !important;
+}
+
+.subtitle, p, li, .resume-date {
+    color: var(--text-color) !important;
+}
+
+/* Service Items */
+.service-item {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.service-item .name {
+    color: var(--header-color) !important;
+}
+
+.service-item p {
+    color: var(--service-text) !important;
+}
+
+/* Profile Section */
+.profile .title {
+    color: var(--header-color) !important;
+    font-weight: 600;
+}
+
+.profile .subtitle {
+    color: var(--subtitle-color) !important;
+}
+
+/* Resume Section */
+.resume-title .name {
+    color: var(--header-color) !important;
+}
+
+.resume-items .resume-item .date {
+    color: var(--resume-date) !important;
+}
+
+.resume-items .resume-item .company {
+    color: var(--subtitle-color) !important;
+}
+
+/* Skills Section */
+.skills-list .progress {
+    background: var(--progress-bar-bg);
+}
+
+.skills-list ul li .name {
+    color: var(--header-color) !important;
+}
+
+.skills-list .progress .percentage {
+    background: var(--theme-color);
+    color: var(--button-text);
+}
+
+/* Services & Pricing */
+.pricing-item {
+    background: var(--pricing-bg);
+    border-color: var(--border-color);
+}
+
+.pricing-item .name {
+    color: var(--header-color) !important;
+}
+
+.pricing-item .amount {
+    color: var(--theme-color);
+}
+
+.pricing-item .feature-list ul li {
+    color: var(--text-color) !important;
+}
+
+/* Buttons & Links */
+.button, .lnk {
+    background: var(--theme-color);
+    color: var(--button-text) !important;
+}
+
+/* Projects */
+.project-card {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+}
+
+.project-card .name {
+    color: var(--header-color) !important;
+}
+
+.project-card .category {
+    color: var(--subtitle-color) !important;
+}
+
+.tech-stack span {
+    background: var(--box-bg);
+    color: var(--text-color);
+    border: 1px solid var(--border-color);
+}
+
+/* Blog Posts */
+.box-item {
+    background: var(--card-bg);
+    border-color: var(--border-color);
+    box-shadow: var(--card-box-shadow);
+}
+
+.box-item .desc .name {
+    color: var(--header-color) !important;
+}
+
+.box-item .desc .text {
+    color: var(--text-color) !important;
+}
+
+/* Contact Form */
+input, textarea {
+    background: var(--box-bg) !important;
+    border-color: var(--border-color) !important;
+    color: var(--text-color) !important;
+}
+
+/* Menu Items */
+.top-menu-onepage .menu li a {
+    color: var(--menu-color);
+}
+
+.top-menu-onepage .menu li a span {
+    color: var(--menu-color);
+}
+
+.top-menu-onepage .menu li:hover a,
+.top-menu-onepage .menu li.active a {
+    color: var(--theme-color);
+}
+
+/* Transitions */
+*, *:before, *:after {
+    transition: background-color 0.3s ease, 
+                color 0.3s ease, 
+                border-color 0.3s ease, 
+                box-shadow 0.3s ease;
+}

@@ -1,0 +1,3 @@
+date	size'/'remotesize	flags(request:Update,Range state:File response:Modified,Chunked,gZipped)	statuscode	status ('servermsg')	MIME	Etag|Date	URL	localfile	(from URL)
+17:42:30	0/0	---M--	301	error ('Moved%20Permanently')	text/html	date:Sat,%2008%20May%202021%2012:12:31%20GMT	https://ryancv.bslthemes.com/robots.txt		(from )
+17:42:31	52523/52523	---M-Z	200	added ('OK')	text/html	date:Sat,%2008%20May%202021%2012:12:31%20GMT	https://ryancv.bslthemes.com/v4/	C:/Users/RADHEYSHYAM/Desktop/Main/new/index-2.html	(from )

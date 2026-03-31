@@ -1,0 +1,14 @@
+HTTrack3.49-2+htsswf+htsjava launched on Sat, 08 May 2021 17:42:27 at https://ryancv.bslthemes.com/v4/ +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar
+(winhttrack -qgC2%Ps2u1%s%u%I0p3DaK0H0%kf2A25000%f#f -F "Mozilla/4.5 (compatible; HTTrack 3.0x; Windows 98)" -%F "<!-- Mirrored from %s%s by HTTrack Website Copier/3.x [XR&CO'2014], %s -->" -%l "en, *" https://ryancv.bslthemes.com/v4/ -O1 "C:\Users\RADHEYSHYAM\Desktop\Main\new" +*.png +*.gif +*.jpg +*.jpeg +*.css +*.js -ad.doubleclick.net/* -mime:application/foobar )
+
+Information, Warnings and Errors reported for this mirror:
+note:	the hts-log.txt file, and hts-cache folder, may contain sensitive information,
+	such as username/password authentication for websites mirrored in this project
+	do not share these files/folders if you want these information to remain private
+
+17:42:30	Warning: 	Moved Permanently for https://ryancv.bslthemes.com/robots.txt
+17:42:30	Warning: 	File has moved from https://ryancv.bslthemes.com/robots.txt to https://ryancv.bslthemes.com/robots.txt/
+17:42:31	Warning: 	Warning: store text/html without scan: C:/Users/RADHEYSHYAM/Desktop/Main/new/index-2.html
+
+HTTrack Website Copier/3.49-2 mirror complete in 4 seconds : 2 links scanned, 1 files written (52523 bytes overall) [9209 bytes received at 2302 bytes/sec], 52523 bytes transferred using HTTP compression in 1 files, ratio 15%
+(No errors, 3 warnings, 0 messages)
